@@ -17,9 +17,21 @@ def pop_balloon(arr: list[int]):
             # 전체 index 길이를 넘지 않기 위해 % 연산자 사용
         else:
             current_index = (current_index + move) % len(total_range)
+            # -1 % 2 => -1 = 2* -1 + (나머지) = 1
     return result
 
 
 count = int(input())
 numbers = list(map(int, input().split()))
 print(" ".join(map(str, pop_balloon(numbers))))
+
+
+'''
+<<Deque>>
+
+enumerate : index 번호 생성하는 함수
+roate : 양수 일 때는 오른쪽 회전 / 음수 일 때는 왼쪽 회전
+
+[1,2,3,4,5] => [5,1,2,3,4] => [4,5,1,2,3]
+[2,3,4,5,1] => [3,4,5,1,2]
+'''

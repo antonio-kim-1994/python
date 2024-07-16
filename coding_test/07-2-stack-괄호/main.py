@@ -18,6 +18,7 @@
 #
 # judge_bracket(bracket_list)
 
+# for ~ else / while ~ else 확인
 
 def judge_ps(ps: str):
     stack = []

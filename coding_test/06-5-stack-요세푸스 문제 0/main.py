@@ -1,10 +1,10 @@
-def josephus(N, K):
-    people = list(range(1, N + 1))
+def josephus(n: int, k: int):
+    people = list(range(1, n + 1)) # 특정 범위의 숫자를 생성, range(start, stop)
     result = []
     index = 0
 
     while len(people) > 0:
-        index = (index + K - 1) % len(people)
+        index = (index + k - 1) % len(people)
         result.append(people.pop(index))
 
     return result
